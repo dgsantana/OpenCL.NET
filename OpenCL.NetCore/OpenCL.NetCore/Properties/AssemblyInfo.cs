@@ -28,4 +28,4 @@ using System.Runtime.CompilerServices;
 
 [assembly: Guid("843901d2-80e4-4310-ac81-c86885e2da7e")]
 
-[assembly:InternalsVisibleTo("OpenCL.Net.Tests")]
+[assembly:InternalsVisibleTo("OpenCL.NetCore.Tests")]
