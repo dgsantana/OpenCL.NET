@@ -28,6 +28,9 @@ using OpenCL.NetCore.Extensions;
 using Microsoft.CSharp;
 using Microsoft.Build.Framework;
 using System.CodeDom;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("OpenCL.NetCore.Tests")]
 
 namespace OpenCL.NetCore.Tasks
 {
