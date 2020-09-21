@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore.csproj": {
-                "projectPath": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore.csproj"
+              "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCoreCore\\OpenCL.NetCoreCore.csproj": {
+                "projectPath": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCoreCore\\OpenCL.NetCoreCore.csproj"
               }
             }
           }
@@ -78,38 +78,39 @@
         }
       }
     },
-    "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore.csproj": {
+    "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCoreCore\\OpenCL.NetCoreCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore.csproj",
-        "projectName": "OpenCL.NetCore",
-        "projectPath": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore.csproj",
+        "projectUniqueName": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCoreCore\\OpenCL.NetCoreCore.csproj",
+        "projectName": "OpenCL.NetCoreCore",
+        "projectPath": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCoreCore\\OpenCL.NetCoreCore.csproj",
         "packagesPath": "C:\\Users\\Gabe\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCore\\obj\\",
+        "outputPath": "E:\\repos\\OpenCL.NetCore\\OpenCL.NetCore\\OpenCL.NetCoreCore\\obj\\",
         "projectStyle": "PackageReference",
-        "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
-        ],
         "configFilePaths": [
           "C:\\Users\\Gabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "uap10.0.17763"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "uap10.0.17763": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
-        "uap10.0.17763": {
+        "netcoreapp3.1": {
           "dependencies": {
             "ExtraConstraints.Fody": {
               "target": "Package",
@@ -119,43 +120,27 @@
               "target": "Package",
               "version": "[16.6.0, )"
             },
-            "Microsoft.NETCore.UniversalWindowsPlatform": {
-              "target": "Package",
-              "version": "[6.2.10, )"
-            },
             "System.CodeDom": {
               "target": "Package",
               "version": "[4.7.0, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
-        }
-      },
-      "runtimes": {
-        "win10-arm": {
-          "#import": []
-        },
-        "win10-arm-aot": {
-          "#import": []
-        },
-        "win10-arm64-aot": {
-          "#import": []
-        },
-        "win10-x64": {
-          "#import": []
-        },
-        "win10-x64-aot": {
-          "#import": []
-        },
-        "win10-x86": {
-          "#import": []
-        },
-        "win10-x86-aot": {
-          "#import": []
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

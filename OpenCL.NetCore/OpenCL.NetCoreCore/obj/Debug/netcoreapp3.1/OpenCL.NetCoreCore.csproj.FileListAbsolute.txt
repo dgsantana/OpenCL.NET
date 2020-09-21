@@ -1,0 +1,10 @@
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\obj\Debug\netcoreapp3.1\OpenCL.NetCoreCore.csprojAssemblyReference.cache
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\obj\Debug\netcoreapp3.1\OpenCL.NetCoreCore.AssemblyInfoInputs.cache
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\obj\Debug\netcoreapp3.1\OpenCL.NetCoreCore.AssemblyInfo.cs
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\obj\Debug\netcoreapp3.1\OpenCL.NetCoreCore.csproj.CoreCompileInputs.cache
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\bin\Debug\netcoreapp3.1\OpenCL.NetCoreCore.deps.json
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\bin\Debug\netcoreapp3.1\OpenCL.NetCoreCore.dll
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\bin\Debug\netcoreapp3.1\OpenCL.NetCoreCore.pdb
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\obj\Debug\netcoreapp3.1\OpenCL.NetCoreCore.csproj.Fody.CopyLocal.cache
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\obj\Debug\netcoreapp3.1\OpenCL.NetCoreCore.dll
+E:\repos\OpenCL.NetCore\OpenCL.NetCore\OpenCL.NetCoreCore\obj\Debug\netcoreapp3.1\OpenCL.NetCoreCore.pdb

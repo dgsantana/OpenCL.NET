@@ -131,7 +131,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Cl.VectorTypes.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Extensions\CLExtensions.cs" />
     <Compile Include="Extensions\KernelWrapperBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
