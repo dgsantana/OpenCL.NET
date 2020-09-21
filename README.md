@@ -9,6 +9,7 @@ OOP abstraction, nor will there ever be. OpenCL.Net is meant to be small, fast (
 little explicit marshaling as possible) and .NET friendly at the same time.
 
 OpenCL.NetCore is a fork of [OpenCL.Net by Ananth B](https://github.com/dgsantana/OpenCL.NET/). The main purpose of this project is to modernize OpenCL.Net by giving it proper VS projects and MSTests in .NET Core.
+It still needs some testing and debugging.
 
 ### License
 The contents of this project are made available under the terms of the
