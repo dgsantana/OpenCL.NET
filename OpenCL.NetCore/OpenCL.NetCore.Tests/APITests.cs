@@ -150,23 +150,20 @@ namespace OpenCL.NetCore.Tests
         private Context _context;
         private Device _device;
 
-        [ClassInitialize]
-        public void Setup()
+        public APITests()
         {
             ErrorCode error;
 
             _device = (from device in
                            Cl.GetDeviceIDs(
                                (from platform in Cl.GetPlatformIDs(out error)
-                                where Cl.GetPlatformInfo(platform, PlatformInfo.Name, out error).ToString() == "NVIDIA CUDA"
+                                where Cl.GetPlatformInfo(platform, PlatformInfo.Name, out error).ToString() == "AMD Accelerated Parallel Processing" // Use "NVIDIA CUDA" if you don't have amd
                                 select platform).First(), DeviceType.Gpu, out error)
                        select device).First();
 
             _context = Cl.CreateContext(null, 1, new[] { _device }, null, IntPtr.Zero, out error);
         }
-
-        [ClassCleanup]
-        public void Teardown()
+        ~APITests()
         {
             _context.Dispose();
         }
@@ -198,7 +195,7 @@ namespace OpenCL.NetCore.Tests
             Assert.AreEqual(error, ErrorCode.Success);
 
             Assert.AreEqual(Cl.GetMemObjectInfo(buffer, MemInfo.Type, out error).CastTo<MemObjectType>(), MemObjectType.Buffer);
-            Assert.AreEqual(Cl.GetMemObjectInfo(buffer, MemInfo.Size, out error).CastTo<uint>(), values.Length * sizeof (float));
+            Assert.AreEqual(Cl.GetMemObjectInfo(buffer, MemInfo.Size, out error).CastTo<int>(), values.Length * sizeof (float));
 
             // TODO: Verify values
             //int index = 0;
@@ -228,8 +225,8 @@ namespace OpenCL.NetCore.Tests
                                                   (IntPtr)200, (IntPtr)200, (IntPtr)0, image2DData, out error);
                 Assert.AreEqual(error, ErrorCode.Success);
 
-                Assert.AreEqual(Cl.GetImageInfo(image2D, ImageInfo.Width, out error).CastTo<uint>(), 200);
-                Assert.AreEqual(Cl.GetImageInfo(image2D, ImageInfo.Height, out error).CastTo<uint>(), 200);
+                Assert.AreEqual(Cl.GetImageInfo(image2D, ImageInfo.Width, out error).CastTo<int>(), 200);
+                Assert.AreEqual(Cl.GetImageInfo(image2D, ImageInfo.Height, out error).CastTo<int>(), 200);
 
                 image2D.Dispose();
             }
@@ -240,9 +237,9 @@ namespace OpenCL.NetCore.Tests
                                                   (IntPtr)200, (IntPtr)200, (IntPtr)200, IntPtr.Zero, IntPtr.Zero, image3DData, out error);
                 Assert.AreEqual(error, ErrorCode.Success);
 
-                Assert.AreEqual(Cl.GetImageInfo(image3D, ImageInfo.Width, out error).CastTo<uint>(), 200);
-                Assert.AreEqual(Cl.GetImageInfo(image3D, ImageInfo.Height, out error).CastTo<uint>(), 200);
-                Assert.AreEqual(Cl.GetImageInfo(image3D, ImageInfo.Depth, out error).CastTo<uint>(), 200);
+                Assert.AreEqual(Cl.GetImageInfo(image3D, ImageInfo.Width, out error).CastTo<int>(), 200);
+                Assert.AreEqual(Cl.GetImageInfo(image3D, ImageInfo.Height, out error).CastTo<int>(), 200);
+                Assert.AreEqual(Cl.GetImageInfo(image3D, ImageInfo.Depth, out error).CastTo<int>(), 200);
 
                 image3D.Dispose();
             }
@@ -256,13 +253,13 @@ namespace OpenCL.NetCore.Tests
             {
                 Assert.AreEqual(ErrorCode.Success, error);
 
-                Assert.AreEqual(1, Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.ReferenceCount, out error).CastTo<uint>());
+                Assert.AreEqual(1, Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.ReferenceCount, out error).CastTo<int>());
 
                 Cl.RetainCommandQueue(commandQueue);
-                Assert.AreEqual(2, Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.ReferenceCount, out error).CastTo<uint>());
+                Assert.AreEqual(2, Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.ReferenceCount, out error).CastTo<int>());
 
                 Cl.ReleaseCommandQueue(commandQueue);
-                Assert.AreEqual(1, Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.ReferenceCount, out error).CastTo<uint>());
+                Assert.AreEqual(1, Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.ReferenceCount, out error).CastTo<int>());
 
                 Assert.AreEqual(Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.Context, out error).CastTo<Context>(), _context);
                 Assert.AreEqual(Cl.GetCommandQueueInfo(commandQueue, CommandQueueInfo.Device, out error).CastTo<Device>(), _device);
