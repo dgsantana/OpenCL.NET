@@ -1,6 +1,8 @@
 # OpenCL.NetCore
 by Gabe C
 
+Nuget Package coming soon!
+
 ### What is it?
 .NET bindings for OpenCL that are easy-to-use and true to the original API. There is no 
 OOP abstraction, nor will there ever be. OpenCL.Net is meant to be small, fast (with as 
