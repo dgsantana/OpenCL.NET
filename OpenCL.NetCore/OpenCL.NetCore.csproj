@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Gabe C</Authors>
+    <Description>.NET bindings for OpenCL that are easy-to-use and true to the original API. There is no OOP abstraction, nor will there ever be. OpenCL.Net is meant to be small, fast (with as little explicit marshaling as possible) and .NET friendly at the same time.</Description>
+    <PackageLicenseFile>LICENSE-EPL1.0.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/FracturedCodes/OpenCL.NetCore</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE-EPL1.0.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="FodyWeavers.xsd" />
   </ItemGroup>
 
